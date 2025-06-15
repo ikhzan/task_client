@@ -1,16 +1,17 @@
 <header>
-  <nav class="navbar">
+  <nav>
     <div class="logo">
       <h4><a routerLink="">Task Client</a></h4>
     </div>
-    <div class="pill-group">
-      <a class="pill" routerLink="tasks">Tasks</a>
-      <a class="pill" routerLink="teams">Teams</a>
-      <a class="pill" routerLink="kpi">KPI</a>
-      <a class="pill" routerLink="faq">Faq</a>
+    <div class="navbar">
+      <a class="navbar-item" ariaCurrentWhenActive="page" routerLinkActive="active" routerLink="tasks">Tasks</a>
+      <a class="navbar-item" ariaCurrentWhenActive="page" routerLinkActive="active" routerLink="teams">Teams</a>
+      <a class="navbar-item" ariaCurrentWhenActive="page" routerLinkActive="active" routerLink="users">Users</a>
+      <a class="navbar-item" ariaCurrentWhenActive="page" routerLinkActive="active" routerLink="kpi">KPI</a>
+      <a class="navbar-item" ariaCurrentWhenActive="page" routerLinkActive="active" routerLink="faq">Faq</a>
     </div>
     <div class="auth">
-      <a class="pill" routerLink="login">Login</a>
+      <a class="navbar-item" ariaCurrentWhenActive="page" routerLinkActive="active"  routerLink="login">Login</a>
     </div>
   </nav>
 </header>

@@ -9,16 +9,20 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { FaqComponent } from './faq/faq.component';
+import { TaskdetailComponent } from './tasks/taskdetail/taskdetail.component';
+import { TeamdetailComponent } from './team/teamdetail/teamdetail.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent},
     { path: 'auth', component: AuthComponent},
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'faq', component: FaqComponent},
+    { path: '', component: HomeComponent},
+    { path: 'faq', component:FaqComponent},
     { path: 'kpi', component: KpiComponent},
     { path: 'tasks', component: TasksComponent},
+    { path: 'tasks/:id', component: TaskdetailComponent},
     { path: 'teams', component: TeamComponent},
+    { path: 'teams/:id', component: TeamdetailComponent},
     { path: 'users', component: UsersComponent},
     { path: '**', component: NotfoundComponent},
 ];
