@@ -5,12 +5,20 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { TeamComponent } from './team/team.component';
 import { KpiComponent } from './kpi/kpi.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { FaqComponent } from './faq/faq.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'auth', component: AuthComponent},
+    { path: 'login', component: LoginComponent},
+    { path: 'register', component: RegisterComponent},
+    { path: 'faq', component: FaqComponent},
     { path: 'kpi', component: KpiComponent},
     { path: 'tasks', component: TasksComponent},
     { path: 'teams', component: TeamComponent},
     { path: 'users', component: UsersComponent},
+    { path: '**', component: NotfoundComponent},
 ];

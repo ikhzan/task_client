@@ -1,16 +1,21 @@
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <h4><a routerLink="">Task Client</a></h4>
+    </div>
+    <div class="pill-group">
+      <a class="pill" routerLink="tasks">Tasks</a>
+      <a class="pill" routerLink="teams">Teams</a>
+      <a class="pill" routerLink="kpi">KPI</a>
+      <a class="pill" routerLink="faq">Faq</a>
+    </div>
+    <div class="auth">
+      <a class="pill" routerLink="login">Login</a>
+    </div>
+  </nav>
+</header>
 <main class="main">
   <div class="content">
-    <div class="left-side">
-      <router-outlet></router-outlet>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-      <div class="pill-group">
-        <a class="pill" routerLink="auth">Auth</a>
-        <a class="pill" routerLink="tasks">Tasks</a>
-        <a class="pill" routerLink="teams">Teams</a>
-        <a class="pill" routerLink="kpi">KPI</a>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </main>
