@@ -179,3 +179,35 @@ nav {
     margin-block: 1.5rem;
   }
 }
+
+table{
+  width: 80%;
+  border-collapse: collapse;
+  height: 50px;
+  overflow: auto;
+  /* margin: 1rem; */
+  margin-top: 1rem;
+  border: .2px solid var(--gray-400);
+}
+
+thead{
+  background-color: var(--gray-700);
+  color: aliceblue;
+}
+th{
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+tbody tr:nth-child(even){
+  background-color: var(--gray-400);
+}
+
+tbody td{
+  font-size: 13px;
+  padding: 5px;
+  min-width: 200px;
+}

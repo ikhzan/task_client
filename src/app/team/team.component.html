@@ -1,2 +1,26 @@
-<h1>Hello, {{ title }}</h1>
-<p>Congratulations! Your app is running. 🎉</p>
+<div class="teams">
+    <div class="title">
+        <h1>Hello, {{ title }}</h1>
+        <p>Congratulations! Your app is running. 🎉</p>
+    </div>
+    <div class="tasks-data">
+        <table class="table">
+            <thead>
+               <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Members</th>
+                <th>Tasks</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let team of teams">
+                    <td>{{ team._id}}</td>
+                    <td>{{ team.name}}</td>
+                    <td style="word-wrap: break-word;">{{ team.members}}</td>
+                    <td>{{ team.tasks}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
