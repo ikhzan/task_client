@@ -14,6 +14,7 @@ import { TeamdetailComponent } from './home/team/teamdetail/teamdetail.component
 import { PageComponent } from './home/page/page.component';
 import { AboutComponent } from './home/about/about.component';
 import { PageAuthComponent } from './auth/page-auth/page-auth.component';
+import { BoardsComponent } from './home/boards/boards.component';
 
 export const routes: Routes = [
     {
@@ -27,6 +28,7 @@ export const routes: Routes = [
             { path: 'tasks/:id', component: TaskdetailComponent },
             { path: 'teams', component: TeamComponent },
             { path: 'teams/:id', component: TeamdetailComponent },
+            { path: 'boards', component: BoardsComponent },
         ]
     },
     {

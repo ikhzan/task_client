@@ -1,0 +1,142 @@
+.boards {
+  display: flex;
+  justify-content: space-between;
+}
+.boards .left {
+  width: 30%;
+  padding: 1rem;
+}
+.boards .left .left-menus {
+  padding: 1rem;
+  background-color: rgba(19, 196, 215, 0.2);
+  margin-bottom: 3px;
+}
+.boards .left .left-menus:hover {
+  cursor: pointer;
+  color: #13c4d7;
+  background-color: rgba(19, 196, 215, 0.5);
+}
+.boards .left .left-menus a {
+  text-decoration: none;
+  color: #13c4d7;
+  font-size: 12px;
+}
+.boards .left .left-menus fa-icon {
+  margin-right: 5px;
+  font-size: 12px;
+  color: #13c4d7;
+}
+.boards .middle {
+  width: 100%;
+  padding: 1rem;
+}
+.boards .middle .title {
+  margin-bottom: 2rem;
+}
+.boards .middle .title h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #13c4d7;
+}
+.boards .middle .title h2 span {
+  color: azure;
+}
+.boards .middle .title p {
+  margin-top: 2rem;
+  font-size: 14px;
+}
+.boards .middle .title p span {
+  color: #13c4d7;
+}
+.boards .middle .middle-container {
+  display: flex;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(8, 211, 79, 0.2);
+  padding-bottom: 1rem;
+}
+.boards .middle .middle-container .profile-picture {
+  height: 100px;
+  margin-right: 1rem;
+  border: 1px solid #13c4d7;
+}
+.boards .middle .middle-container .profile-picture img {
+  height: 100%;
+  color: aqua;
+  filter: grayscale(1);
+}
+.boards .middle .middle-container .profile-picture img:hover {
+  filter: grayscale(0);
+}
+.boards .middle .middle-container .profile-picture:hover {
+  cursor: pointer;
+  color: #13c4d7;
+  background-color: rgba(19, 196, 215, 0.2);
+}
+.boards .middle .middle-container .details {
+  justify-content: center;
+  justify-items: center;
+}
+.boards .middle .middle-container .details .author-title {
+  margin-bottom: 5px;
+}
+.boards .middle .middle-container .details .author-title:hover {
+  cursor: pointer;
+}
+.boards .middle .middle-container .details .author-title .author-name {
+  text-transform: uppercase;
+  color: #13c4d7;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.boards .middle .middle-container .details .author-title .organinzation {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.boards .middle .middle-container .details .texts {
+  font-size: 13px;
+}
+.boards .middle .horizontal-line {
+  border: 0.5px solid #13c4d7;
+}
+.boards .right {
+  width: 30%;
+  padding: 1rem;
+}
+.boards .right .right-container h2 {
+  background-color: rgba(85, 212, 237, 0.2);
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding: 0.5rem;
+  font-weight: 400;
+  color: #55d4ed;
+}
+.boards .right .right-container h2 span {
+  color: azure;
+}
+.boards .right .right-container .upcoming-events .row {
+  background-color: rgba(85, 212, 237, 0.2);
+  padding: 0.3rem;
+  margin-bottom: 3px;
+  display: flex;
+}
+.boards .right .right-container .upcoming-events .row:hover {
+  cursor: pointer;
+  color: #13c4d7;
+  background-color: rgba(19, 196, 215, 0.5);
+}
+.boards .right .right-container .upcoming-events .row .event-check, .boards .right .right-container .upcoming-events .row .event-name {
+  font-size: 12px;
+  font-weight: 400;
+}
+.boards .right .right-container .upcoming-events .row .event-date {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.boards .right .right-container .upcoming-events .row .event-check {
+  margin-right: 0.5rem;
+}
+.boards .right .right-container .upcoming-events .row .event-name, .boards .right .right-container .upcoming-events .row .event-check {
+  color: #13c4d7;
+}

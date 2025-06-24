@@ -3,6 +3,9 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms'
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
 
 @Component({
   selector: 'app-login',
@@ -23,13 +26,19 @@ export class LoginComponent implements OnInit {
   authService: AuthService = inject(AuthService)
   router: Router = inject(Router)
 
+  constructor( @Inject(PLATFORM_ID) private platformId: Object
+){}
+
   ngOnInit(): void {
-    if (localStorage.getItem('token') != null) {
-      localStorage.removeItem('token')
+   if (isPlatformBrowser(this.platformId)) {
+      if (localStorage.getItem('accesstoken') !== null) {
+        localStorage.removeItem('accesstoken');
+      }
+      if (localStorage.getItem('username') !== null) {
+        localStorage.removeItem('username');
+      }
     }
-    if (localStorage.getItem('username') != null) {
-      localStorage.removeItem('username')
-    }
+
   }
 
   onRegister() {

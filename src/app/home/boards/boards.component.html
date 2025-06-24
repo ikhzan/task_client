@@ -1,0 +1,44 @@
+<div class="boards">
+    <div class="left">
+        <div class="left-menus"  (click)="openBoard(log.name)"  *ngFor="let log of branches">
+            <fa-icon [icon]="faAngleDoubleRight"></fa-icon>
+            <a routerLink="">{{log.name.toUpperCase()}}</a>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="title">
+            <h2>Review <span>Board</span></h2>
+            <div class="horizontal-line"></div>
+            <p>Please <span>press</span> or <span>click</span> a member's name for more information</p>
+        </div>
+        <div class="middle-container" *ngFor="let log of boards">
+            <div class="profile-picture">
+                <img src="{{log.filePath}}" alt="{{log.name}}" >
+            </div>
+            <div class="details" >
+                <div class="author-title">
+                    <h3 class="author-name" (click)="showTexts(log.id)">{{log.name}}</h3>
+                    <h4 class="organinzation">{{log.origanization}}</h4>
+                </div>
+                <div class="texts" [hidden]="visibleRrowIndex !==log.id">
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, consequatur magni beatae ducimus accusantium molestias deserunt iste odit nemo, totam eligendi, explicabo unde voluptas deleniti tempora mollitia sapiente dolore quam numquam animi neque adipisci. Enim blanditiis quas sit aspernatur, necessitatibus magnam nemo assumenda dolorum laudantium rem delectus officiis quibusdam obcaecati commodi magni quaerat iusto? Ab praesentium incidunt minus accusantium expedita impedit eos commodi, delectus a voluptatem aut reprehenderit, velit repellendus, fuga esse sapiente inventore iste amet sint nemo. Ab, cum voluptas eos, facere eveniet ratione dolor mollitia nam sapiente odio quam soluta vero quia cumque ducimus asperiores accusamus magni quis!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="right-container">
+            <div class="upcoming-events">
+                <h2>upcoming <span>events</span></h2>
+                <div class="row" (click)="openEvent(log.name)" *ngFor="let log of seminars">
+                    <fa-icon class="event-check" [icon]="faAngleDoubleRight"></fa-icon> 
+                    <div class="col">
+                        <p class="event-name">{{  log.name }}</p>
+                        <p class="event-date">{{ log.time}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

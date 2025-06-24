@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
 export interface LoginResponse {
-  access: string;
+  accessToken: string;
   refresh: string;
 }
 
@@ -26,13 +26,14 @@ export class AuthService {
   async loginUser(userLoginData: LoginData): Promise<string> {
     try {
       const response = await firstValueFrom(this.http.post<LoginResponse>(this.apiRoot, userLoginData));
-      if (response.access) {
-        localStorage.setItem('token', response.access)
+      console.log(this.className + " response " + response)
+      if (response.accessToken) {
+        localStorage.setItem('accessToken', response.accessToken)
         localStorage.setItem('username', userLoginData.username)
         console.log(`${this.className}: ${response}`)
         this.isLogged = true
       }
-      return response.access;
+      return response.accessToken;
     } catch (error) {
       this.isLogged = false
       throw 'An error occurred during login. Please try again.';

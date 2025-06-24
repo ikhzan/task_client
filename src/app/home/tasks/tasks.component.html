@@ -1,28 +1,30 @@
 <div class="tasks">
+  <div class="section-1">
     <div class="title">
-        <h1>Hello, {{ title }}</h1>
-        <p>Congratulations! Your app is running. 🎉</p>
+      <h1>Hello, {{ title }}</h1>
+      <p>Congratulations! Your app is running. 🎉</p>
     </div>
     <div class="tasks-data">
-        <table class="table">
-            <thead>
-               <tr>
-                <th>Title</th>
-                <th>Completed</th>
-                <th>Description</th>
-                <th>Tags</th>
-                <th>Priority</th>
-               </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let task of tasks">
-                    <td>{{ task.title}}</td>
-                    <td>{{ task.completed}}</td>
-                    <td>{{ task.description}}</td>
-                    <td>{{ task.tags}}</td>
-                    <td>{{ task.priority}}</td>
-                </tr>
-            </tbody>
-        </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Completed</th>
+            <th>Description</th>
+            <th>Tags</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks">
+            <td>{{ task.title }}</td>
+            <td>{{ task.completed }}</td>
+            <td>{{ task.description }}</td>
+            <td>{{ task.tags }}</td>
+            <td>{{ task.priority }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>
