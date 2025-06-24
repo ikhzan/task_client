@@ -1,0 +1,69 @@
+<div class="page">
+    <div class="section-1">
+        <div class="left">
+            <div class="left-container">
+                <div class="heros">
+                    <div class="corosel" >
+                        <img  
+                            [src]="imagePath" [alt]="imagePath" 
+                            class="image-active">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, error?</p>
+                    </div>
+
+                    <div class="heros-desc">
+                        <h2>Next <span>Events</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit dolorum quasi explicabo voluptates ea quaerat officiis, fuga provident omnis.</p>
+                    </div>
+                </div>
+
+                <div class="review-board">
+                    <div class="title">
+                        <h2>Review <span>Board</span></h2>
+                        <div class="horizontal-line"></div>
+                    </div>
+                    <div class="board" >
+                        <div class="board-content" *ngFor="let log of boards">
+                            <div class="profile-picture" >
+                                <img src="{{log.filePath}}" alt="">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="see-all">
+                        <a routerLink="/boards">View all Members<fa-icon [icon]="faAngleDoubleRight"></fa-icon></a>
+                    </div>
+                </div>
+
+                <div class="review-board">
+                    <div class="title">
+                        <h2>Training <span>Review</span></h2>
+                        <div class="horizontal-line"></div>
+                    </div>
+                    <div class="board" >
+                        <div class="board-content" *ngFor="let log of boards">
+                            <div class="profile-picture" >
+                                <img src="{{log.filePath}}" alt="">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="see-all">
+                        <a routerLink="/boards">View all Members<fa-icon [icon]="faAngleDoubleRight"></fa-icon></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="right">
+            <h2>upcoming <span>events</span></h2>
+            <div class="right-container">
+                <div class="row" *ngFor="let log of events">
+                    <h4>{{log.name}}</h4>
+                    <p>{{log.time}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
