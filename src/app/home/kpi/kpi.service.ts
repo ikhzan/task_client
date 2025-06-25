@@ -1,9 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KpiService {
-
-  constructor() { }
+  className = "KpiService"
+  constructor(private http:HttpClient) { }
 }

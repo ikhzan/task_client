@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
-import { Task } from './task_models';
+import { Task } from './task.model';
 
 
 @Injectable({
@@ -45,4 +45,17 @@ export class TasksService {
     //   })
     // )
   }
+  
+  fetchTasks(): Observable<any>{
+    return this.http.get(this.urlPath).pipe(
+      map(response => {
+        return response
+      }),
+      catchError(error => {
+          console.error('Error occured:',error.message)
+          return of([error])
+      })
+    )
+  }
+
 }

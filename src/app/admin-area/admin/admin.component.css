@@ -1,0 +1,263 @@
+.home {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #d8d8d8;
+}
+.home .navbar {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #113c60;
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 5px 5px 5px #939393;
+}
+.home .navbar .logo {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.home .navbar .logo a {
+  text-decoration: none;
+  color: #fff;
+}
+.home .navbar .navbar-items {
+  display: flex;
+}
+.home .navbar .navbar-item {
+  margin-right: 5px;
+}
+.home .navbar .navbar-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 5px;
+}
+.home .navbar .navbar-item a:hover {
+  background-color: #012645;
+}
+.home .navbar .navbar-item a.active {
+  background-color: #012645;
+}
+.home .navbar .navbar-item span {
+  min-height: 200px;
+}
+.home .navbar .navbar-item span fa-icon {
+  margin: 2px;
+}
+.home .navbar .navbar-item span.dropdown {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.home .navbar .navbar-item span:hover {
+  background-color: #012645;
+  cursor: pointer;
+}
+.home .navbar .navbar-item span:hover .dropdown-content {
+  padding: 5px 6px;
+  text-decoration: none;
+  display: block;
+}
+.home .navbar .navbar-item span .dropdown-content {
+  display: none;
+  min-height: 200px;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+.home .navbar .navbar-item span .dropdown-content a {
+  color: black;
+  font-size: 13px;
+  width: 100%;
+  display: block;
+}
+.home .navbar .navbar-item span .dropdown-content a:hover {
+  color: #f1f1f1;
+}
+.home .navbar .navbar-item span .dropdown-content a fa-icon {
+  margin-right: 5px;
+  color: #595a5c;
+}
+@media only screen and (max-width: 900px) {
+  .home .navbar .navbar-items {
+    display: none;
+  }
+}
+.home .navbar .right-menu {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+.home .navbar .right-menu span:hover {
+  cursor: pointer;
+}
+.home .navbar .right-menu span:hover .dropdown-devices {
+  padding: 5px 6px;
+  text-decoration: none;
+  display: block;
+}
+.home .navbar .right-menu span .selected-device {
+  font-size: 14px;
+  max-width: 200px;
+}
+.home .navbar .right-menu .dropdown-devices {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 2rem;
+  max-width: 200px;
+}
+.home .navbar .right-menu .dropdown-devices p {
+  color: black;
+  font-size: 13px;
+  width: 100%;
+  display: block;
+  padding: 1rem 0.2rem;
+}
+.home .navbar .right-menu .dropdown-devices p:hover {
+  background-color: #6a9ac1;
+}
+.home .navbar .right-menu .dropdown-devices p fa-icon {
+  margin-right: 5px;
+  color: #595a5c;
+}
+.home .navbar .right-menu .navbar-item {
+  margin-right: 10px;
+  font-weight: 300;
+  margin-top: 6px;
+}
+.home .navbar .right-menu fa-icon {
+  margin-left: 5px;
+  padding-left: 5px;
+}
+.home .navbar .right-menu fa-icon:hover {
+  transform: rotate(45deg);
+}
+.home .navbar .right-menu .user {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.home .navbar .right-menu .user img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+}
+.home .navbar .right-menu .user:hover {
+  cursor: pointer;
+}
+.home .navbar .right-menu .user:hover .user-menu {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+.home .navbar .right-menu .user .user-menu {
+  display: none;
+  min-height: 200px;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 2px;
+  top: 4rem;
+  right: 3rem;
+}
+.home .navbar .right-menu .user .user-menu .row-one {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.home .navbar .right-menu .user .user-menu .row-one:hover {
+  background-color: #1a1515;
+}
+.home .navbar .right-menu .user .user-menu .row-one fa-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #333;
+}
+.home .navbar .right-menu .user .user-menu .row-one span {
+  color: #333;
+  font-size: 13px;
+}
+.home .navbar .right-menu .user .user-menu .row-one:hover {
+  background-color: #f1f1f1;
+}
+.home .navbar .right-menu .user .user-menu .row-two .logout, .home .navbar .right-menu .user .user-menu .row-two .setting, .home .navbar .right-menu .user .user-menu .row-two .profile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  border-bottom: 1px solid #ccc;
+}
+.home .navbar .right-menu .user .user-menu .row-two .logout:hover, .home .navbar .right-menu .user .user-menu .row-two .setting:hover, .home .navbar .right-menu .user .user-menu .row-two .profile:hover {
+  background-color: #6a9ac1;
+  cursor: pointer;
+  color: #fff;
+}
+.home .navbar .right-menu .user .user-menu .row-two .logout span, .home .navbar .right-menu .user .user-menu .row-two .setting span, .home .navbar .right-menu .user .user-menu .row-two .profile span {
+  text-decoration: none;
+}
+.home .navbar .right-menu .user .user-menu .row-two .logout fa-icon, .home .navbar .right-menu .user .user-menu .row-two .setting fa-icon, .home .navbar .right-menu .user .user-menu .row-two .profile fa-icon {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.home .content {
+  margin-top: 1rem;
+  min-height: 50vh;
+  margin: 1rem 2rem 2rem 2rem;
+  min-height: 100vh;
+}
+.home .container {
+  margin: 1rem 2rem 2rem 2rem;
+  min-height: 100vh;
+}
+.home .footer {
+  color: #fff;
+  position: relative;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.home .footer .footer-container {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #939393;
+  background-color: #012645;
+  display: flex;
+  margin: 0 2rem 1rem 2rem;
+  padding-top: 1rem;
+}
+.home .footer .footer-container .footer-left {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.home .footer .footer-container .footer-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}

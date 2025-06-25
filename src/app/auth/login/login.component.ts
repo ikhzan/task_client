@@ -2,9 +2,9 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms'
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth/auth.service';
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { AuthService } from '../auth.service';
 
 
 @Component({

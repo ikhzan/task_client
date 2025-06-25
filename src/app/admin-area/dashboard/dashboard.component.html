@@ -1,0 +1,135 @@
+
+<div class="container">
+    <div class="row">
+        <div class="top-col">
+            <h2>Device Info</h2>
+            <div class="col-body">
+                <div class="text-body">
+                    <p>Model </p>
+                    <span>{{device_info.model}}</span>
+                </div>
+                <div class="text-body">
+                    <p>OS </p>
+                    <span>{{device_info.os}}</span>
+                </div>
+                <div class="text-body">
+                    <p>IMEI </p>
+                    <span>{{device_info.imei}}</span>
+                </div>
+                <div class="text-body">
+                    <p>Country </p>
+                    <span>{{country}}</span>
+                </div>
+                <div class="text-body">
+                    <p>Network </p>
+                    <span>{{device_info.network}}</span>
+                </div>
+                <div class="text-body">
+                    <p>Battery </p>
+                    <span>{{device_info.battery}}</span>
+                </div>
+                <div class="text-body">
+                    <p>Status </p>
+                    <span class={{client_status}}>{{client_status}}</span>
+                </div>
+                <div class="text-body last">
+                    <p>Last Sync </p>
+                    <span>{{last_sync}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="top-col">
+            <h2>Product Info</h2>
+            <div class="col-body">
+                <div class="text-body">
+                    <p>Product Key </p>
+                    <span>{{product_info.product_name}}</span>
+                </div>
+                <div class="text-body">
+                    <p>License Key </p>
+                    <span>{{product_info.license_key}}</span>
+                </div>
+                <div class="text-body">
+                    <p>Installation </p>
+                    <span>{{product_info.expiration_date}}</span>
+                </div>
+                <div class="text-body last">
+                    <p>Version </p>
+                    <span>{{product_version}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="top-col">
+            <h2>Server Info</h2>
+            <div class="col-body">
+
+                <div class="text-body">
+                    <p>Version </p>
+                    <span>{{server_version}}</span>
+                </div>
+                <div class="text-body last">
+                    <p>Status </p>
+                    <span>OFF</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="bottom-col">
+            <h2><a href="calllog">Latest Calls</a> </h2>
+            <div class="bottom-texts">
+                <table class="table">
+                    <tbody>
+                        <!-- <tr *ngFor="let call of call_logs">
+                            <td>{{ call.phone_number }}</td>
+                            <td><span class="{{ call.status}}">{{call.status}}</span></td>
+                            <td>{{call.created_at}}</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="bottom-col">
+            <h2><a href="sms">Latest SMS</a></h2>
+            <div class="bottom-texts">
+                <table class="table">
+                    <!-- <tbody>
+                        <tr *ngFor="let call of messages">
+                            <td>{{ call.sender_reciever }}</td>
+                            <td><span class="{{ call.sms_type}}">{{call.sms_type}}</span></td>
+                            <td>{{call.created_at}}</td>
+                        </tr>
+                    </tbody> -->
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="bottom-col">
+            <h2><a href="keylogs">Latest Keylogs</a></h2>
+            <div class="bottom-texts">
+                <table class="table">
+                    <tbody>
+                        <!-- <tr *ngFor="let call of call_logs">
+                            <td>{{ call.phone_number }}</td>
+                            <td><span class="{{ call.status}}">{{call.status}}</span></td>
+                            <td>{{call.created_at}}</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    

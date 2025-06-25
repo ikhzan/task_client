@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
 import { TasksComponent } from './home/tasks/tasks.component';
 import { HomeComponent } from './home/home.component';
-import { UsersComponent } from './users/users.component';
+import { UsersComponent } from './admin-area/users/users.component';
 import { TeamComponent } from './home/team/team.component';
 import { KpiComponent } from './home/kpi/kpi.component';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -15,6 +15,10 @@ import { PageComponent } from './home/page/page.component';
 import { AboutComponent } from './home/about/about.component';
 import { PageAuthComponent } from './auth/page-auth/page-auth.component';
 import { BoardsComponent } from './home/boards/boards.component';
+import { AdminComponent } from './admin-area/admin/admin.component';
+import { DashboardComponent } from './admin-area/dashboard/dashboard.component';
+import { HelpComponent } from './admin-area/help/help.component';
+import { LogsComponent } from './admin-area/logs/logs.component';
 
 export const routes: Routes = [
     {
@@ -38,7 +42,15 @@ export const routes: Routes = [
             { path: 'register', component: RegisterComponent },
         ]
     },
+    { path: 'admin', redirectTo: '/dashboard', pathMatch: 'full' },
+    {
+        path: '', component: AdminComponent, children: [
+            { path: 'dashboard', component: DashboardComponent },
+            { path: 'users', component: UsersComponent },
+            { path: 'helps', component: HelpComponent },
+            { path: 'logs', component: LogsComponent },
+        ]
+    },
 
-    { path: 'users', component: UsersComponent },
     { path: '**', component: NotfoundComponent },
 ];

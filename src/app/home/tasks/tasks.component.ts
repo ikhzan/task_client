@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TasksService } from './tasks.service';
-import { Task } from './task_models';
+import { Task } from './task.model';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -23,7 +23,7 @@ export class TasksComponent {
   fetchTasks(){
     try{
       console.log('fetch tasks')
-      const response = this.taskService.getTasks();
+      const response = this.taskService.fetchTasks();
       response.subscribe(
         data => {
           console.log('Result data: ', data)
